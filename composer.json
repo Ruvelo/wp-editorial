@@ -1,0 +1,59 @@
+{
+    "name": "ruvelo/wp-editorial",
+    "description": "Review and approval for WordPress, built on core Notes: a review queue, assigned reviewers, approvals and optional publish gates.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "keywords": ["wordpress", "plugin", "editorial", "workflow", "review", "approval", "notes"],
+    "homepage": "https://ruvelo.github.io/wp-editorial/",
+    "authors": [
+        {"name": "François Bultez", "homepage": "https://github.com/francoisbultez"}
+    ],
+    "support": {
+        "issues": "https://github.com/Ruvelo/wp-editorial/issues",
+        "source": "https://github.com/Ruvelo/wp-editorial"
+    },
+    "require": {
+        "php": "^8.2",
+        "composer/installers": "^2.3"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "laravel/pint": "^1.18",
+        "php-stubs/wp-cli-stubs": "^2.11",
+        "phpstan/phpstan": "^2.1",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "phpunit/phpunit": "^9.6",
+        "wp-coding-standards/wpcs": "^3.1",
+        "wp-phpunit/wp-phpunit": "^7.1",
+        "yoast/phpunit-polyfills": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {"Ruvelo\\WP\\Editorial\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Ruvelo\\WP\\Editorial\\Tests\\": "tests/"}
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {"composer/installers": true, "dealerdirect/phpcodesniffer-composer-installer": true}
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": ["pint --test", "phpcs"],
+        "format": ["pint", "phpcbf || true"],
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "check": ["@lint", "@analyse", "@test"],
+        "zip": "bash bin/build-zip.sh",
+        "pot": "wp i18n make-pot . languages/ruvelo-editorial.pot --slug=ruvelo-editorial --domain=ruvelo-editorial --exclude=vendor,tests,.wp,build,node_modules"
+    },
+    "scripts-descriptions": {
+        "test": "Run the PHPUnit integration tests",
+        "lint": "Check code style (Pint) and the WordPress security, database and i18n sniffs (PHPCS)",
+        "format": "Fix code style",
+        "analyse": "Run PHPStan at level 8",
+        "check": "Everything CI runs",
+        "zip": "Build build/ruvelo-editorial.zip, the distributable plugin",
+        "pot": "Regenerate languages/ruvelo-editorial.pot"
+    },
+    "minimum-stability": "stable"
+}

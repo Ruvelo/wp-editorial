@@ -1,0 +1,940 @@
+# Copyright (C) 2026 Ruvelo
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ruvelo Editorial 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ruvelo-editorial\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-09T07:31:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ruvelo-editorial\n"
+
+#. Plugin Name of the plugin
+#: ruvelo-editorial.php
+msgid "Ruvelo Editorial"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: ruvelo-editorial.php
+msgid "https://ruvelo.github.io/wp-editorial/"
+msgstr ""
+
+#. Description of the plugin
+#: ruvelo-editorial.php
+msgid "Review and approval on top of core Notes: ask for a review, approve or request changes, see what waits for you, and optionally hold publishing until a post is approved."
+msgstr ""
+
+#. Author of the plugin
+#: ruvelo-editorial.php
+msgid "Ruvelo"
+msgstr ""
+
+#. Author URI of the plugin
+#: ruvelo-editorial.php
+msgid "https://github.com/Ruvelo"
+msgstr ""
+
+#: src/Abilities.php:32
+msgid "Editorial reviews"
+msgstr ""
+
+#: src/Abilities.php:33
+msgid "Review states, the review queue, approvals and change requests."
+msgstr ""
+
+#: src/Abilities.php:46
+msgid "Get a post’s review state"
+msgstr ""
+
+#: src/Abilities.php:47
+msgid "Returns where a post is in review: Not in review, In review, Changes requested or Approved; its reviewers and their decisions; approvals so far and needed; open core notes; the due date; whether its publish gate is satisfied; and the review history."
+msgstr ""
+
+#: src/Abilities.php:57
+msgid "Get the review queue"
+msgstr ""
+
+#: src/Abilities.php:58
+msgid "Lists posts in the current user’s review queue. Views: mine (waiting for my review), changes (changes requested on my posts), approved (approved and ready to publish), all (everything in review)."
+msgstr ""
+
+#: src/Abilities.php:77
+#: src/Admin/ReviewPage.php:151
+#: src/Admin/ReviewPage.php:167
+msgid "Ask for a review"
+msgstr ""
+
+#: src/Abilities.php:78
+msgid "Asks reviewers (user IDs) to review a post, with an optional due date (Y-m-d) and message. On a post already in review it changes the reviewers; after changes were requested it starts a new round. Needs edit access to the post."
+msgstr ""
+
+#: src/Abilities.php:97
+msgid "Approve a post"
+msgstr ""
+
+#: src/Abilities.php:98
+msgid "Approves a post as the current user, who must be one of its reviewers and have the ruvelo_review_posts capability. With enough approvals the post becomes Approved."
+msgstr ""
+
+#: src/Abilities.php:113
+msgid "Request changes on a post"
+msgstr ""
+
+#: src/Abilities.php:114
+msgid "Sends a post back to its author with a message, as the current user (one of its reviewers, with the ruvelo_review_posts capability). Set create_note to also leave the message as a core note on the post."
+msgstr ""
+
+#: src/Abilities.php:179
+#: src/Rest/Controller.php:163
+#: src/Review.php:437
+msgid "Reviews aren’t switched on for this post type."
+msgstr ""
+
+#: src/Admin/Admin.php:51
+#: src/Admin/Admin.php:63
+#: src/Admin/Admin.php:223
+#: src/Admin/Dashboard.php:23
+#: src/Admin/QueuePage.php:46
+#: src/Admin/SettingsPage.php:33
+#: src/Privacy.php:63
+msgid "Reviews"
+msgstr ""
+
+#. translators: %d: number of posts
+#: src/Admin/Admin.php:59
+#, php-format
+msgid "%d post waiting for your review"
+msgid_plural "%d posts waiting for your review"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/Admin.php:64
+msgid "Review queue"
+msgstr ""
+
+#: src/Admin/Admin.php:65
+#: src/Admin/Admin.php:128
+#: src/Admin/Admin.php:132
+#: src/Admin/QueueTable.php:77
+msgid "Review"
+msgstr ""
+
+#: src/Admin/Admin.php:66
+#: src/Admin/SettingsPage.php:24
+msgid "Review settings"
+msgstr ""
+
+#: src/Admin/Admin.php:66
+msgid "Settings"
+msgstr ""
+
+#. translators: 1: approvals so far, 2: approvals needed
+#: src/Admin/Admin.php:159
+#: src/Admin/QueueTable.php:200
+#: src/Admin/QueueTable.php:205
+#, php-format
+msgid "%1$d of %2$d approvals"
+msgstr ""
+
+#. translators: %d: open notes
+#: src/Admin/Admin.php:163
+#, php-format
+msgid "%d open note"
+msgid_plural "%d open notes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/Admin.php:174
+msgid "Filter by review state"
+msgstr ""
+
+#: src/Admin/Admin.php:175
+msgid "All review states"
+msgstr ""
+
+#: src/Admin/Admin.php:212
+msgid "Saved, not published."
+msgstr ""
+
+#: src/Admin/Admin.php:212
+msgid "Open the review"
+msgstr ""
+
+#: src/Admin/Admin.php:223
+msgid "Emails"
+msgstr ""
+
+#: src/Admin/Admin.php:224
+msgid "Email me when I’m asked to review, and when my posts are approved or need changes"
+msgstr ""
+
+#: src/Admin/Admin.php:225
+msgid "Emails are grouped: one every few minutes at most."
+msgstr ""
+
+#: src/Admin/Admin.php:226
+msgid "Review screens"
+msgstr ""
+
+#: src/Admin/Admin.php:227
+msgid "Light"
+msgstr ""
+
+#: src/Admin/Admin.php:227
+msgid "Dark"
+msgstr ""
+
+#: src/Admin/Admin.php:227
+msgid "Match my device"
+msgstr ""
+
+#: src/Admin/Dashboard.php:31
+msgid "Waiting for you"
+msgstr ""
+
+#: src/Admin/Dashboard.php:32
+msgid "Need your changes"
+msgstr ""
+
+#: src/Admin/Dashboard.php:33
+#: src/Admin/ReviewPage.php:105
+msgid "Ready to publish"
+msgstr ""
+
+#: src/Admin/Dashboard.php:49
+msgid "You’re all caught up."
+msgstr ""
+
+#: src/Admin/Dashboard.php:55
+#: src/Admin/QueueTable.php:167
+#: src/Admin/ReviewPage.php:42
+#: src/Notifications.php:255
+msgid "(no title)"
+msgstr ""
+
+#: src/Admin/Dashboard.php:60
+msgid "Open the review queue"
+msgstr ""
+
+#: src/Admin/QueuePage.php:37
+msgid "You can’t see the review queue."
+msgstr ""
+
+#: src/Admin/QueuePage.php:47
+msgid "Posts waiting for a decision, posts sent back for changes, and posts ready to publish."
+msgstr ""
+
+#: src/Admin/QueuePage.php:67
+msgid "Search posts"
+msgstr ""
+
+#: src/Admin/QueueTable.php:76
+#: src/Privacy.php:66
+msgid "Post"
+msgstr ""
+
+#: src/Admin/QueueTable.php:78
+#: src/Admin/ReviewPage.php:160
+#: src/Admin/ReviewPage.php:227
+msgid "Reviewers"
+msgstr ""
+
+#: src/Admin/QueueTable.php:79
+#: src/Admin/SettingsPage.php:33
+msgid "Open notes"
+msgstr ""
+
+#: src/Admin/QueueTable.php:80
+#: src/Admin/ReviewPage.php:165
+#: src/Admin/ReviewPage.php:241
+msgid "Due"
+msgstr ""
+
+#: src/Admin/QueueTable.php:81
+msgid "Last activity"
+msgstr ""
+
+#: src/Admin/QueueTable.php:122
+#: src/Admin/SettingsPage.php:33
+msgid "Post type"
+msgstr ""
+
+#: src/Admin/QueueTable.php:122
+msgid "All types"
+msgstr ""
+
+#: src/Admin/QueueTable.php:129
+msgid "Reviewer"
+msgstr ""
+
+#: src/Admin/QueueTable.php:129
+msgid "Any reviewer"
+msgstr ""
+
+#: src/Admin/QueueTable.php:138
+msgid "Any author"
+msgstr ""
+
+#: src/Admin/QueueTable.php:143
+msgid "Author"
+msgstr ""
+
+#: src/Admin/QueueTable.php:145
+msgid "Overdue only"
+msgstr ""
+
+#: src/Admin/QueueTable.php:146
+msgid "Filter"
+msgstr ""
+
+#: src/Admin/QueueTable.php:153
+msgid "Nothing is waiting for your review. When someone asks you, it shows up here."
+msgstr ""
+
+#: src/Admin/QueueTable.php:154
+msgid "No changes requested on your posts."
+msgstr ""
+
+#: src/Admin/QueueTable.php:155
+msgid "Nothing approved is waiting to go out."
+msgstr ""
+
+#: src/Admin/QueueTable.php:156
+msgid "No posts are in review. Ask for one from the Review panel in the editor."
+msgstr ""
+
+#. translators: 1: post type, 2: author
+#: src/Admin/QueueTable.php:172
+#, php-format
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: src/Admin/QueueTable.php:178
+msgid "Review and history"
+msgstr ""
+
+#: src/Admin/QueueTable.php:180
+#: src/Admin/ReviewPage.php:57
+msgid "Open in the editor"
+msgstr ""
+
+#: src/Admin/QueueTable.php:184
+#: src/Admin/ReviewPage.php:61
+msgid "Preview"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:36
+msgid "That post doesn’t exist, or you can’t review it."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:46
+msgid "← Review queue"
+msgstr ""
+
+#. translators: 1: author, 2: post status (Draft, Pending…)
+#: src/Admin/ReviewPage.php:51
+#, php-format
+msgid "By %1$s · %2$s"
+msgstr ""
+
+#. translators: %s: reviewer
+#: src/Admin/ReviewPage.php:87
+#, php-format
+msgid "%s requested changes"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:92
+msgid "Make the changes, then ask for a review again below."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:105
+msgid "It has the approvals it needs. Publish or schedule it from the editor."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:109
+msgid "Publishing is on hold"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:111
+msgid "Publish without the approvals"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:113
+msgid "Why can’t this wait? (logged and sent to the reviewers)"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:115
+msgid "Publish now"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:130
+msgid "Your review"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:132
+msgid "You approved this post."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:135
+msgid "Message for the author (optional when approving)"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:138
+msgid "Also leave it as a note on the post"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:142
+msgid "Approve"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:144
+msgid "Request changes"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:150
+msgid "Change reviewers"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:152
+msgid "Ask for a review again"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:158
+msgid "Nobody can review this post yet. Reviewers need the “Review posts” capability (editors and administrators have it)."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:166
+msgid "Message for the reviewers (optional)"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:167
+msgid "Save reviewers"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:169
+msgid "Take it out of review"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:179
+msgid "History"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:181
+msgid "Nothing yet. Ask for a review to start."
+msgstr ""
+
+#. translators: %s: date
+#: src/Admin/ReviewPage.php:198
+#, php-format
+msgid "Due %s."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:205
+msgid "Left as a note on the post."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:220
+msgid "Approvals"
+msgstr ""
+
+#. translators: 1: approvals so far, 2: approvals needed
+#: src/Admin/ReviewPage.php:223
+#, php-format
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:230
+msgid "Nobody yet."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:232
+#: src/States.php:43
+msgid "Approved"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:232
+msgid "Requested changes"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:232
+msgid "Hasn’t reviewed yet"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:232
+msgid "Not asked this round"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:243
+msgid "Notes"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:245
+msgid "None"
+msgstr ""
+
+#. translators: 1: open notes, 2: all notes
+#: src/Admin/ReviewPage.php:249
+#, php-format
+msgid "%1$d open of %2$d"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:254
+msgid "Asked by"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:257
+msgid "Round"
+msgstr ""
+
+#: src/Admin/ReviewPage.php:306
+#: src/Review.php:276
+msgid "You can’t change the review of this post."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:312
+msgid "Approved. The author has been told."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:316
+msgid "Changes requested. The author has been told."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:320
+msgid "Review requested. The reviewers have been told."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:324
+msgid "Taken out of review."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:336
+msgid "Scheduled, with your reason logged."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:336
+msgid "Published, with your reason logged."
+msgstr ""
+
+#: src/Admin/ReviewPage.php:338
+msgid "Unknown action."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:20
+#: src/Admin/SettingsPage.php:70
+msgid "You can’t change review settings."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:25
+msgid "Reviews sit beside WordPress’s own statuses and Notes. Turn them on per post type, and decide whether publishing waits for approval."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:32
+msgid "Post types"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:33
+msgid "Publish gate"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:33
+#: src/Admin/SettingsPage.php:41
+msgid "Approvals needed"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:39
+msgid "On"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:40
+msgid "Hold publishing until approved"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:42
+msgid "Must be resolved before publishing"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:45
+msgid "The gate applies when a post is first published or scheduled, from any screen, the REST API or WP-CLI. Administrators can publish past it with a reason, which is logged."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:48
+msgid "Notifications"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:49
+msgid "Email"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:49
+msgid "Email reviewers and authors about requests, approvals and changes"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:50
+msgid "Group emails for"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:50
+msgid "minutes"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:51
+msgid "WP-Cron sends each person one email with everything that happened in that window. People can turn emails off on their profile."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:52
+msgid "Ruvelo Inbox"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:52
+msgid "Also deliver to the in-app inbox"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:53
+msgid "An inbox is active on this site."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:53
+msgid "No inbox is active, so nothing is sent there. Install Ruvelo Inbox to collect review updates in the admin bar."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:56
+msgid "Uninstalling"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:56
+msgid "Data"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:57
+msgid "When the plugin is deleted, also delete review states, history and settings"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:58
+msgid "Off by default: deleting the plugin keeps the review history. Core notes are never deleted; they belong to your posts."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:60
+msgid "Save changes"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:82
+msgid "Settings saved."
+msgstr ""
+
+#: src/Gate.php:70
+msgid "Changes were requested. Make them, then ask for a review again."
+msgstr ""
+
+#. translators: 1: approvals needed, 2: approvals so far
+#: src/Gate.php:75
+#, php-format
+msgid "It needs %1$d approval before it can be published (it has %2$d)."
+msgid_plural "It needs %1$d approvals before it can be published (it has %2$d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: approvals needed
+#: src/Gate.php:81
+#, php-format
+msgid "It needs %d approval before it can be published."
+msgid_plural "It needs %d approvals before it can be published."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of open notes
+#: src/Gate.php:90
+#, php-format
+msgid "Resolve its %d open note first."
+msgid_plural "Resolve its %d open notes first."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Gate.php:167
+#: src/Rest/Controller.php:135
+#: src/Rest/Controller.php:255
+#: src/Review.php:434
+msgid "That post doesn’t exist."
+msgstr ""
+
+#: src/Gate.php:170
+msgid "You can’t publish past the review gate."
+msgstr ""
+
+#: src/Gate.php:174
+msgid "Say why it should go out without its approvals. The reason is logged and sent to the reviewers."
+msgstr ""
+
+#. translators: 1: person asking, 2: reviewers' names
+#: src/History.php:104
+#, php-format
+msgid "%1$s asked %2$s to review it again."
+msgstr ""
+
+#. translators: 1: person asking, 2: reviewers' names
+#: src/History.php:108
+#, php-format
+msgid "%1$s asked %2$s for a review."
+msgstr ""
+
+#. translators: 1: person, 2: reviewers' names
+#: src/History.php:111
+#, php-format
+msgid "%1$s changed the reviewers to %2$s."
+msgstr ""
+
+#. translators: %s: reviewer
+#: src/History.php:114
+#, php-format
+msgid "%s approved."
+msgstr ""
+
+#: src/History.php:116
+msgid "It has the approvals it needs and is ready to publish."
+msgstr ""
+
+#. translators: %s: reviewer
+#: src/History.php:119
+#, php-format
+msgid "%s requested changes."
+msgstr ""
+
+#. translators: %s: person
+#: src/History.php:122
+#, php-format
+msgid "%s took it out of review."
+msgstr ""
+
+#. translators: %s: person
+#: src/History.php:125
+#, php-format
+msgid "%s published it."
+msgstr ""
+
+#. translators: %s: person
+#: src/History.php:128
+#, php-format
+msgid "%s scheduled it."
+msgstr ""
+
+#. translators: %s: person
+#: src/History.php:131
+#, php-format
+msgid "%s published it without the approvals it needed."
+msgstr ""
+
+#: src/History.php:133
+msgid "It was published without the approvals it needed, outside the editor."
+msgstr ""
+
+#: src/Notes.php:130
+msgid "That note isn’t on this post."
+msgstr ""
+
+#: src/Notes.php:160
+#: src/Notes.php:178
+msgid "The note couldn’t be added to this post."
+msgstr ""
+
+#: src/Notes.php:163
+msgid "Write a message to leave it as a note."
+msgstr ""
+
+#. translators: 1: site name, 2: number of updates
+#: src/Notifications.php:197
+#, php-format
+msgid "[%1$s] %2$d review updates"
+msgstr ""
+
+#: src/Notifications.php:212
+msgid "Open it:"
+msgstr ""
+
+#: src/Notifications.php:217
+msgid "Everything waiting for you:"
+msgstr ""
+
+#: src/Notifications.php:218
+msgid "Stop these emails on your profile page:"
+msgstr ""
+
+#. translators: 1: person, 2: post title, 3: due date
+#: src/Notifications.php:262
+#, php-format
+msgid "%1$s asked you to review “%2$s” by %3$s."
+msgstr ""
+
+#. translators: 1: person, 2: post title
+#: src/Notifications.php:266
+#, php-format
+msgid "%1$s asked you to review “%2$s”."
+msgstr ""
+
+#. translators: 1: reviewer, 2: post title, 3: approvals so far, 4: approvals needed
+#: src/Notifications.php:269
+#, php-format
+msgid "%1$s approved “%2$s” (%3$d of %4$d approvals)."
+msgstr ""
+
+#. translators: %s: post title
+#: src/Notifications.php:272
+#, php-format
+msgid "“%s” is approved and ready to publish."
+msgstr ""
+
+#. translators: 1: reviewer, 2: post title
+#: src/Notifications.php:275
+#, php-format
+msgid "%1$s requested changes on “%2$s”."
+msgstr ""
+
+#. translators: 1: person, 2: post title
+#: src/Notifications.php:278
+#, php-format
+msgid "%1$s took “%2$s” out of review. Nothing to do for now."
+msgstr ""
+
+#. translators: 1: person, 2: post title
+#: src/Notifications.php:281
+#, php-format
+msgid "%1$s published “%2$s” without its approvals."
+msgstr ""
+
+#. translators: %s: post title
+#: src/Notifications.php:284
+#, php-format
+msgid "Review update on “%s”."
+msgstr ""
+
+#: src/People.php:19
+msgid "WordPress"
+msgstr ""
+
+#: src/People.php:23
+msgid "A former user"
+msgstr ""
+
+#: src/People.php:33
+msgid "nobody"
+msgstr ""
+
+#: src/Privacy.php:29
+#: src/Privacy.php:40
+msgid "Reviews (Ruvelo Editorial)"
+msgstr ""
+
+#: src/Privacy.php:67
+msgid "What happened"
+msgstr ""
+
+#: src/Privacy.php:68
+msgid "Message"
+msgstr ""
+
+#: src/Privacy.php:69
+msgid "Date"
+msgstr ""
+
+#: src/Queue.php:167
+msgid "Waiting for my review"
+msgstr ""
+
+#: src/Queue.php:168
+msgid "Changes requested on my posts"
+msgstr ""
+
+#: src/Queue.php:169
+msgid "Approved, ready to publish"
+msgstr ""
+
+#: src/Queue.php:170
+msgid "Everything in review"
+msgstr ""
+
+#: src/Rest/Controller.php:119
+msgid "Review state, from Ruvelo Editorial."
+msgstr ""
+
+#: src/Review.php:134
+msgid "You can’t ask for a review of this post."
+msgstr ""
+
+#: src/Review.php:137
+msgid "This post is already published or scheduled. Reviews happen before that."
+msgstr ""
+
+#: src/Review.php:142
+msgid "Choose at least one reviewer."
+msgstr ""
+
+#. translators: %s: a person's name
+#: src/Review.php:148
+#, php-format
+msgid "%s can’t review this post. Reviewers need the review capability and access to the post, and can’t be its author."
+msgstr ""
+
+#. translators: %d: number of approvals
+#: src/Review.php:157
+#, php-format
+msgid "This needs %d approval: choose at least that many reviewers."
+msgid_plural "This needs %d approvals: choose at least that many reviewers."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Review.php:162
+msgid "Use a due date like 2026-10-14."
+msgstr ""
+
+#: src/Review.php:215
+msgid "You’ve already approved this post."
+msgstr ""
+
+#: src/Review.php:280
+msgid "This post isn’t in review."
+msgstr ""
+
+#: src/Review.php:407
+msgid "Only the reviewers of this post can approve it or request changes."
+msgstr ""
+
+#: src/Review.php:410
+msgid "This post isn’t waiting for a review. Ask for one first."
+msgstr ""
+
+#: src/States.php:40
+msgid "Not in review"
+msgstr ""
+
+#: src/States.php:41
+msgid "In review"
+msgstr ""
+
+#: src/States.php:42
+msgid "Changes requested"
+msgstr ""
+
+#: src/Support/Html.php:31
+msgid "approved"
+msgstr ""
+
+#: src/Support/Html.php:32
+msgid "requested changes"
+msgstr ""
+
+#: src/Support/Html.php:33
+msgid "hasn’t reviewed yet"
+msgstr ""
+
+#: src/Support/Html.php:72
+msgid "Overdue"
+msgstr ""
+
+#. translators: %s: human time difference, e.g. "2 hours"
+#: src/Support/Html.php:85
+#, php-format
+msgid "%s ago"
+msgstr ""

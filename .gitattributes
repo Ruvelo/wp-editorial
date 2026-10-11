@@ -1,0 +1,16 @@
+# Keep Composer installs and `git archive` to what a site needs.
+/.github export-ignore
+/.wordpress-org export-ignore
+/bin export-ignore
+/site export-ignore
+/tests export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/blueprint.json export-ignore
+/CONTRIBUTING.md export-ignore
+/phpcs.xml.dist export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml.dist export-ignore
+/pint.json export-ignore
+/README.md export-ignore
