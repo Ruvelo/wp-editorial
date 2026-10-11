@@ -1,0 +1,56 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+        "title": "Ruvelo Editorial: Halyard's marketing team mid-review",
+        "description": "Review queue, assigned reviewers, approvals and a publish gate on core Notes, with Halyard's posts in every review state. You're signed in as Inès Laurent, the managing editor.",
+        "author": "Ruvelo",
+        "categories": ["Content", "Admin"]
+    },
+    "landingPage": "/wp-admin/admin.php?page=ruvelo-editorial",
+    "preferredVersions": {
+        "php": "8.3",
+        "wp": "7.1"
+    },
+    "features": {
+        "networking": false
+    },
+    "login": true,
+    "steps": [
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "Halyard",
+                "permalink_structure": "/%postname%/"
+            }
+        },
+        {
+            "step": "installTheme",
+            "themeData": {
+                "resource": "wordpress.org/themes",
+                "slug": "twentytwentyfive"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginData": {
+                "resource": "url",
+                "url": "https://github.com/Ruvelo/wp-editorial/releases/latest/download/ruvelo-editorial.zip"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp ruvelo-editorial demo --yes"
+        },
+        {
+            "step": "login",
+            "username": "ines.laurent",
+            "password": "password"
+        }
+    ]
+}
