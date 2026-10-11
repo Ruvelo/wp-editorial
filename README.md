@@ -23,7 +23,7 @@
 **Review and approval for WordPress, built on core Notes.** WordPress gave your team Notes: comments on any block of a draft. Ruvelo Editorial adds the decision around them: who should review this post, have they, and can it go out. A review queue, assigned reviewers, "approved" and "changes requested", and optional gates that hold publishing until a post is approved. It extends what core does and replaces nothing: notes stay core notes, statuses stay core statuses.
 
 ```
-wp plugin install ruvelo-editorial --activate
+wp plugin install https://github.com/Ruvelo/wp-editorial/releases/latest/download/ruvelo-editorial.zip --activate
 ```
 
 Reviews are on for posts and pages straight away: open a draft and use the **Review** panel. Or look around [Halyard's marketing team in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Ruvelo/wp-editorial/main/blueprint.json) first, signed in as their managing editor.
@@ -103,7 +103,7 @@ Reviews are on for posts and pages straight away: open a draft and use the **Rev
 
 ## Getting started
 
-**1. Install** from Plugins → Add New, with WP-CLI as above, or with Composer (`composer require ruvelo/wp-editorial`, installed by `composer/installers` as a WordPress plugin).
+**1. Install** by uploading [ruvelo-editorial.zip](https://github.com/Ruvelo/wp-editorial/releases/latest/download/ruvelo-editorial.zip) in Plugins → Add New → Upload Plugin, with WP-CLI as above, or with Composer (`composer require ruvelo/wp-editorial`, installed by `composer/installers` as a WordPress plugin).
 
 **2. Ask for a review.** Open a draft, find the **Review** panel in the document sidebar, pick reviewers and a due date. They get an email a few minutes later and see the post in Reviews → Review queue.
 
