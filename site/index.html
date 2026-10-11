@@ -6,9 +6,11 @@
     <title>Ruvelo Editorial for WordPress</title>
     <meta name="description" content="Review and approval for WordPress, built on core Notes: a review queue, assigned reviewers, approvals and optional publish gates. No upsells.">
     <link rel="icon" href="img/icon-128x128.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono&display=swap">
+<link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Geist"; src: url("fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Mono"; src: url("fonts/GeistMono-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+</style>
     <style>
         :root { --ink: #16162a; --t2: #4b4b63; --t3: #74748b; --line: #e4e4ef; --subtle: #f8f8fc; --muted: #f0f0f7; --accent: #3d4eff; --accent-ink: #2b38d6; --soft: #eef0ff; --lilac: #a78bfa; --night: #11111c; --bg: #fff; color-scheme: light; }
         @media (prefers-color-scheme: dark) { :root { --ink: #f1f1f8; --t2: #b6b6cc; --t3: #8787a3; --line: #2a2a3f; --subtle: #171725; --muted: #1f1f30; --accent: #8f9bff; --accent-ink: #b3bbff; --soft: #1e2150; --bg: #11111c; color-scheme: dark; } }
