@@ -1,0 +1,25 @@
+name: release
+
+# Tag v1.2.3 to publish: builds ruvelo-editorial.zip and attaches it to the
+# GitHub release. The Playground demo installs that zip.
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the plugin
+        run: bash bin/build-zip.sh
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: build/ruvelo-editorial.zip
+          generate_release_notes: true
